@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ASCEND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gray: '#2a2a2a',
+                            silver: '#a0a0a0',
+                            white: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        header: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-black text-white font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-header font-bold tracking-widest text-white">ASCEND<span
+                    class="text-brand-silver">.</span></a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">HOME</a>
+                <a href="about.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">ABOUT</a>
+                <a href="services.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">SERVICES</a>
+                <a href="contact.html" class="text-brand-silver text-sm font-medium tracking-widest">CONTACT</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-brand-black z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+            <a href="index.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">HOME</a>
+            <a href="about.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">ABOUT</a>
+            <a href="services.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">SERVICES</a>
+            <a href="contact.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e24f7?q=80&w=2069&auto=format&fit=crop"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/80"></div>
+        </div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-header font-bold mb-4 tracking-tighter">CONTACT US</h1>
+            <div class="w-24 h-1 bg-brand-silver mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- Contact Form & Info -->
+    <section class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+                <!-- Info -->
+                <div>
+                    <h2 class="text-3xl font-header font-bold mb-8">VISIT ASCEND</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Ready to elevate your fitness journey? Visit our luxury facility in Matale or send us a message
+                        to schedule a tour.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-white font-bold tracking-widest mb-2 text-sm">ADDRESS</h4>
+                            <p class="text-gray-400">123 Luxury Lane, Matale Town<br>Sri Lanka, 21000</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold tracking-widest mb-2 text-sm">CONTACT</h4>
+                            <p class="text-gray-400">+94 77 123 4567<br>membership@ascendmatale.com</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold tracking-widest mb-2 text-sm">HOURS</h4>
+                            <p class="text-gray-400">Open 24/7 for members</p>
+                            <p class="text-gray-400">Staffed Hours: 6:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-brand-gray p-8 rounded-sm">
+                    <form action="#" class="space-y-6">
+                        <div>
+                            <label
+                                class="block text-xs font-bold tracking-widest text-gray-500 mb-2 uppercase">Name</label>
+                            <input type="text"
+                                class="w-full bg-brand-dark border border-gray-700 text-white p-4 focus:outline-none focus:border-brand-silver transition-colors"
+                                placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold tracking-widest text-gray-500 mb-2 uppercase">Email</label>
+                            <input type="email"
+                                class="w-full bg-brand-dark border border-gray-700 text-white p-4 focus:outline-none focus:border-brand-silver transition-colors"
+                                placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold tracking-widest text-gray-500 mb-2 uppercase">Message</label>
+                            <textarea rows="4"
+                                class="w-full bg-brand-dark border border-gray-700 text-white p-4 focus:outline-none focus:border-brand-silver transition-colors"
+                                placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="button"
+                            class="w-full bg-white text-brand-black font-header font-bold py-4 tracking-widest hover:bg-brand-silver transition-colors uppercase">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <div class="h-[400px] w-full bg-gray-800 flex items-center justify-center">
+        <p class="text-gray-500 font-header tracking-widest">MAP LOCATION (MATALE)</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ASCEND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gray: '#2a2a2a',
+                            silver: '#a0a0a0',
+                            white: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        header: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-black text-white font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-header font-bold tracking-widest text-white">ASCEND<span
+                    class="text-brand-silver">.</span></a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">HOME</a>
+                <a href="about.html" class="text-brand-silver text-sm font-medium tracking-widest">ABOUT</a>
+                <a href="services.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">SERVICES</a>
+                <a href="contact.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">CONTACT</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-brand-black z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+            <a href="index.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">HOME</a>
+            <a href="about.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">ABOUT</a>
+            <a href="services.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">SERVICES</a>
+            <a href="contact.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-header font-bold mb-4 tracking-tighter">OUR STORY</h1>
+            <div class="w-24 h-1 bg-brand-silver mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-header font-bold mb-8">LUXURY FITNESS IN THE HEART OF MATALE</h2>
+                <p class="text-gray-400 leading-loose text-lg mb-8">
+                    ASCEND was founded with a single mission: to provide an unparalleled fitness experience that
+                    combines luxury, community, and results. Located in the vibrant town of Matale, we have created a
+                    sanctuary where fitness meets sophistication.
+                </p>
+                <p class="text-gray-400 leading-loose text-lg">
+                    Our facility features world-class equipment from Italy, a dedicated cardio theater, and spa-like
+                    locker rooms. Whether you are a competitive athlete or beginning your wellness journey, ASCEND
+                    offers the environment you need to thrive.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1637430308694-a9477e3ca03a?q=80&w=2070&auto=format&fit=crop"
+                        alt="Interior"
+                        class="rounded-lg shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-header font-bold mb-4 text-brand-silver">THE PHILOSOPHY</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        We believe that your environment dictates your performance. Every corner of Ascend is designed
+                        to motivate and inspire. From our lighting design to our curated playlists, we set the stage for
+                        your best workout.
+                    </p>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Premium Service
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Expert Trainers
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Holistic
+                            Wellness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-10 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <!-- Same footer content as index.html -->
+            <div class="text-center text-gray-600 text-xs tracking-wider">
+                &copy; 2024 ASCEND. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
