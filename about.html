@@ -30,6 +30,18 @@
             }
         }
     </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body class="bg-brand-black text-white font-sans">
@@ -44,6 +56,8 @@
                 <a href="index.html"
                     class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">HOME</a>
                 <a href="about.html" class="text-brand-silver text-sm font-medium tracking-widest">ABOUT</a>
+                <a href="gallery.html"
+                    class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">GALLERY</a>
                 <a href="services.html"
                     class="text-sm font-medium hover:text-brand-silver transition-colors tracking-widest">SERVICES</a>
                 <a href="contact.html"
@@ -65,6 +79,7 @@
             <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
             <a href="index.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">HOME</a>
             <a href="about.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">ABOUT</a>
+            <a href="gallery.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">GALLERY</a>
             <a href="services.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">SERVICES</a>
             <a href="contact.html" class="text-2xl font-header tracking-widest hover:text-brand-silver">CONTACT</a>
         </div>
@@ -84,43 +99,231 @@
     </div>
 
     <!-- Content -->
+    <!-- Content -->
     <section class="py-24 bg-brand-dark">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-20">
-                <h2 class="text-3xl md:text-4xl font-header font-bold mb-8">LUXURY FITNESS IN THE HEART OF MATALE</h2>
-                <p class="text-gray-400 leading-loose text-lg mb-8">
-                    ASCEND was founded with a single mission: to provide an unparalleled fitness experience that
-                    combines luxury, community, and results. Located in the vibrant town of Matale, we have created a
-                    sanctuary where fitness meets sophistication.
-                </p>
-                <p class="text-gray-400 leading-loose text-lg">
-                    Our facility features world-class equipment from Italy, a dedicated cardio theater, and spa-like
-                    locker rooms. Whether you are a competitive athlete or beginning your wellness journey, ASCEND
-                    offers the environment you need to thrive.
-                </p>
+            <div class="flex flex-col md:flex-row gap-16 items-center mb-32">
+                <div class="w-full md:w-1/2 reveal">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-silver/50">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1637430308694-a9477e3ca03a?q=80&w=2070&auto=format&fit=crop"
+                            alt="Interior"
+                            class="rounded-sm shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover h-[600px]">
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-silver/50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 reveal">
+                    <h4 class="text-brand-silver tracking-widest mb-4 text-sm font-bold">OUR ORIGIN</h4>
+                    <h2 class="text-4xl md:text-5xl font-header font-bold mb-8 leading-tight">LUXURY FITNESS IN
+                        THE<br>HEART OF MATALE</h2>
+                    <p class="text-gray-400 leading-relaxed text-lg mb-8">
+                        ASCEND was founded with a single mission: to provide an unparalleled fitness experience that
+                        combines luxury, community, and results. Located in the vibrant town of Matale, we have created
+                        a
+                        sanctuary where fitness meets sophistication.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-lg mb-10">
+                        Our facility features world-class equipment from Italy, a dedicated cardio theater, and spa-like
+                        locker rooms. Whether you are a competitive athlete or beginning your wellness journey, ASCEND
+                        offers the environment you need to thrive.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-[1px] bg-brand-silver"></div>
+                        <span class="font-header text-xl tracking-wider">EST. 2023</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1637430308694-a9477e3ca03a?q=80&w=2070&auto=format&fit=crop"
-                        alt="Interior"
-                        class="rounded-lg shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700">
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-white/10 py-16 mb-32 reveal">
+                <div class="text-center">
+                    <h3 class="text-4xl md:text-5xl font-header font-bold text-white mb-2">1.5K+</h3>
+                    <p class="text-brand-silver text-xs tracking-[0.2em]">MEMBERS</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-header font-bold mb-4 text-brand-silver">THE PHILOSOPHY</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        We believe that your environment dictates your performance. Every corner of Ascend is designed
-                        to motivate and inspire. From our lighting design to our curated playlists, we set the stage for
-                        your best workout.
-                    </p>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Premium Service
-                        </li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Expert Trainers
-                        </li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-brand-silver mr-3"></span>Holistic
-                            Wellness</li>
-                    </ul>
+                <div class="text-center">
+                    <h3 class="text-4xl md:text-5xl font-header font-bold text-white mb-2">15+</h3>
+                    <p class="text-brand-silver text-xs tracking-[0.2em]">TRAINERS</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl md:text-5xl font-header font-bold text-white mb-2">30+</h3>
+                    <p class="text-brand-silver text-xs tracking-[0.2em]">CLASSES/WEEK</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl md:text-5xl font-header font-bold text-white mb-2">100%</h3>
+                    <p class="text-brand-silver text-xs tracking-[0.2em]">COMMITMENT</p>
+                </div>
+            </div>
+
+            <!-- Team -->
+            <div class="text-center mb-16 reveal">
+                <h4 class="text-brand-silver tracking-widest mb-2 text-sm font-bold">THE SQUAD</h4>
+                <h2 class="text-4xl font-header font-bold">MEET THE EXPERTS</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Trainer 1 -->
+                <div class="group relative overflow-hidden rounded-sm reveal">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1470&auto=format&fit=crop"
+                        class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-header font-bold text-white mb-1">KASUN PERERA</h3>
+                        <p class="text-brand-silver tracking-widest text-xs mb-4">HEAD COACH</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Specializes in hypertrophy and strength conditioning.</p>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="group relative overflow-hidden rounded-sm reveal" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1616763355614-4c619897df7d3?q=80&w=1470&auto=format&fit=crop"
+                        class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-header font-bold text-white mb-1">AMAYA SILVA</h3>
+                        <p class="text-brand-silver tracking-widest text-xs mb-4">YOGA INSTRUCTOR</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Focuses on mobility, flexibility and mindfulness.</p>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="group relative overflow-hidden rounded-sm reveal" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop"
+                        class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-header font-bold text-white mb-1">DINESH KUMARA</h3>
+                        <p class="text-brand-silver tracking-widest text-xs mb-4">HIIT SPECIALIST</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            High energy workouts for fat loss and endurance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-brand-black relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-silver tracking-[0.2em] text-sm font-bold uppercase">Our DNA</span>
+                <h2 class="text-4xl md:text-5xl font-header font-bold mt-2">CORE VALUES</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <!-- Value 1 -->
+                <div
+                    class="p-8 border border-white/5 hover:border-brand-silver/30 transition-colors rounded-sm reveal group">
+                    <div
+                        class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-silver group-hover:text-black transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-header font-bold mb-4">UNRELENTING ENERGY</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We bring passion to everything we do. The gym floor
+                        is our stage, and your performance is the main event.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="p-8 border border-white/5 hover:border-brand-silver/30 transition-colors rounded-sm reveal group"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-silver group-hover:text-black transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-header font-bold mb-4">COMMUNITY FIRST</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Ascend is more than a gym; it's a brotherhood and
+                        sisterhood of like-minded individuals chasing greatness.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="p-8 border border-white/5 hover:border-brand-silver/30 transition-colors rounded-sm reveal group"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-silver group-hover:text-black transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-header font-bold mb-4">OBSESSIVE QUALITY</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">From the equipment we buy to the towels we provide,
+                        we refuse to compromise on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Experience (Testimonials) -->
+    <section class="py-24 bg-brand-dark relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-silver tracking-[0.2em] text-sm font-bold uppercase">Success Stories</span>
+                <h2 class="text-4xl md:text-5xl font-header font-bold mt-2">MEMBER EXPERIENCE</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-brand-black p-10 border border-white/5 rounded-sm reveal relative">
+                    <svg class="w-10 h-10 text-brand-silver/20 absolute top-8 right-8" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                        </path>
+                    </svg>
+                    <p class="text-gray-300 leading-relaxed mb-6 relative z-10 italic">"I've been to every gym in
+                        Matale, but Ascend is on another level. The equipment is top-tier and the community keeps me
+                        motivated every single day."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                            class="w-12 h-12 rounded-full object-cover mr-4 border border-brand-silver">
+                        <div>
+                            <h4 class="text-white font-header font-bold text-sm tracking-wide">SHANAKA P.</h4>
+                            <p class="text-brand-silver text-xs">Member since 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-black p-10 border border-white/5 rounded-sm reveal relative"
+                    style="transition-delay: 200ms;">
+                    <svg class="w-10 h-10 text-brand-silver/20 absolute top-8 right-8" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                        </path>
+                    </svg>
+                    <p class="text-gray-300 leading-relaxed mb-6 relative z-10 italic">"The personal training here
+                        changed my life. The coaches care about your long-term health, not just quick fixes. Highly
+                        recommended!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop"
+                            class="w-12 h-12 rounded-full object-cover mr-4 border border-brand-silver">
+                        <div>
+                            <h4 class="text-white font-header font-bold text-sm tracking-wide">NISHADI K.</h4>
+                            <p class="text-brand-silver text-xs">Platinum Member</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,13 +334,12 @@
         <div class="container mx-auto px-6">
             <!-- Same footer content as index.html -->
             <div class="text-center text-gray-600 text-xs tracking-wider">
-                &copy; 2026 ASCEND. All rights reserved.
+                &copy; 2024 ASCEND. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
